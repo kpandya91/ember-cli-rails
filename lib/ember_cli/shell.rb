@@ -42,7 +42,7 @@ module EmberCli
       end
 
       if paths.yarn.present? && Pathname.new(paths.yarn).executable?
-        run! "#{paths.yarn} install"
+        run! "#{paths.yarn} install" if false
       else
         run! "#{paths.npm} prune && #{paths.npm} install"
       end
